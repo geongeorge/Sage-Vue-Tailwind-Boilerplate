@@ -29,3 +29,8 @@ Edit Sage config in `resources/assets/config.json`
 ## Theme name
 
 Edit theme name in `resources/style.css`
+
+
+## Deploy
+
+Read the [guide on roots.io](https://roots.io/docs/sage/9.x/deployment/)
