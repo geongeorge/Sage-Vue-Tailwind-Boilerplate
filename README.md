@@ -14,6 +14,8 @@ Edit Sage config in `resources/assets/config.json`
 
 ## Install
 
+    composer install
+
     yarn
 
 ## Dev Server
