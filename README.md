@@ -14,3 +14,7 @@
 ## Build
 
     yarn build
+    
+## Theme name
+
+Edit theme name in `resources/style.css`
