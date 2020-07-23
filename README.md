@@ -7,12 +7,9 @@
 
 Edit Sage config in `resources/assets/config.json`
 
-```
-...
+```json
 "publicPath": "/wp-content/themes/sage",
 "devUrl": "http://wordpress.test",
-...
-
 ```
 
 ## Install
