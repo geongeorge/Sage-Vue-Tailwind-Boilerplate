@@ -12,40 +12,30 @@
 }
 
 .aligncenter {
-  @apply my-2 mx-auto;
-
   display: block;
   height: auto;
 }
 
 .alignleft,
 .alignright {
-  @apply mb-4;
-
   height: auto;
 }
 
 @screen sm {
   .alignleft {
-    @apply mr-4;
-
     float: left;
   }
 
   .alignright {
-    @apply ml-4;
-
     float: right;
   }
 }
 
 /** Captions */
 .wp-caption {
-  @apply inline-block mb-4;
 }
 
 .wp-caption img {
-  @apply mb-2 leading-none max-w-full h-auto;
 }
 
 .wp-caption-text {

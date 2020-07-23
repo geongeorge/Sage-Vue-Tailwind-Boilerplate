@@ -3,6 +3,8 @@ module.exports = {
   'rules': {
     'no-empty-source': null,
     'string-quotes': 'double',
+    'block-no-empty': null,
+    'no-eol-whitespace': null,
     'at-rule-no-unknown': [
       true,
       {
