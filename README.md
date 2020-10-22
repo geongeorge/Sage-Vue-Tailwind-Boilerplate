@@ -26,11 +26,10 @@ Edit Sage config in `resources/assets/config.json`
 ## Build
 
     yarn build
-    
+
 ## Theme name
 
 Edit theme name in `resources/style.css`
-
 
 ## Vue js
 
@@ -40,14 +39,16 @@ Edit theme name in `resources/style.css`
 - Use `id` to link the vue instance with the blade html
 
 `modules/counter/counter.blade.php`
+
 ```html
 <div id="counter-module">
-    @{{count}} 
-    <button @click="count++">+</button>
+  @{{count}}
+  <button @click="count++">+</button>
 </div>
 ```
 
 `modules/counter/counter.vue.js`
+
 ```js
 import Vue from 'vue'
 
@@ -61,30 +62,40 @@ new Vue({
 
 ### Vue interpolations
 
-Unfortunately, default Vue text interpolation syntax `{{ someVariable }}` will not work. This is because it conflicts with blade templating syntax. 
+Unfortunately, default Vue text interpolation syntax `{{ someVariable }}` will not work. This is because it conflicts with blade templating syntax.
 
 The alternative is to use either of these
 
 **`@` to escape blade**
-```html
 
+```html
 <p>@{{ someVariable }}</p>
-
 ```
+
 **`v-text`**
+
 ```html
-
 <p v-text="someVariable"></p>
-
 ```
-
 
 ## Deploy
 
 Read the [guide on roots.io](https://roots.io/docs/sage/9.x/deployment/)
 
+# WordPress Customize Settings
 
-## getMod Helper
+## Set a Customizer setting
+
+Create a php file in `app/Customizers`. Any php file in it will be **auto loaded** in **alphabetic order**.
+
+So you can optionally prepend filenames with numbers
+eg: `001.Home.php`, `002.About.php`
+
+**\$wp_customize** should be available in each of the files.
+
+See `app/Customizers/001.Home.php` for example
+
+## Fetch a Customizer setting - getMod() Helper
 
 You can call the `\App\getMod()` helper to get theme mod variables as an array.
 
@@ -110,5 +121,3 @@ $hero = [
 ```
 
 See `./app/Controllers/App.php` for example usage
-
-
