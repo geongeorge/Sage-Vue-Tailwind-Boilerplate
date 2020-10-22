@@ -1,15 +1,15 @@
 {
-  "name": "sage",
-  "version": "9.0.9",
-  "author": "Roots <team@roots.io>",
-  "homepage": "https://roots.io/sage/",
+  "name": "sage-vue-tailwind",
+  "version": "1.0.0",
+  "author": "Geon George <team@roots.io>",
+  "homepage": "https://github.com/geongeorge/Sage-Vue-Tailwind-Boilerplate",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git://github.com/roots/sage.git"
+    "url": "https://github.com/geongeorge/Sage-Vue-Tailwind-Boilerplate.git"
   },
   "bugs": {
-    "url": "https://github.com/roots/sage/issues"
+    "url": "https://github.com/geongeorge/Sage-Vue-Tailwind-Boilerplate/issues"
   },
   "licenses": [
     {
@@ -31,7 +31,10 @@
     "lint": "npm run -s lint:scripts && npm run -s lint:styles",
     "lint:scripts": "eslint resources/assets/scripts resources/assets/build",
     "lint:styles": "stylelint \"resources/assets/styles/**/*.{css,sass,scss,sss,less}\"",
-    "test": "npm run -s lint"
+    "test": "npm run -s lint",
+    "preversion": "npm test",
+    "postversion": "git push && git push --tags"
+
   },
   "engines": {
     "node": ">= 8.0.0"
