@@ -1,6 +1,6 @@
 {
   "name": "sage-vue-tailwind",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Geon George <me@geongeorge.com>",
   "homepage": "https://github.com/geongeorge/Sage-Vue-Tailwind-Boilerplate",
   "private": true,
@@ -34,7 +34,6 @@
     "test": "npm run -s lint",
     "preversion": "npm test",
     "postversion": "git push && git push --tags"
-
   },
   "engines": {
     "node": ">= 8.0.0"
