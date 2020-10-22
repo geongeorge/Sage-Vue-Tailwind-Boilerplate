@@ -1,6 +1,7 @@
 module.exports = {
-  'extends': 'stylelint-config-standard',
-  'rules': {
+  extends: 'stylelint-config-standard',
+  ignoreFiles: ['**/*.js'],
+  rules: {
     'no-empty-source': null,
     'string-quotes': 'double',
     'block-no-empty': null,
@@ -8,7 +9,7 @@ module.exports = {
     'at-rule-no-unknown': [
       true,
       {
-        'ignoreAtRules': [
+        ignoreAtRules: [
           'extend',
           'at-root',
           'debug',
@@ -33,4 +34,4 @@ module.exports = {
       },
     ],
   },
-};
+}
