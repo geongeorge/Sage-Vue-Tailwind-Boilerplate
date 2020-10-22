@@ -82,3 +82,33 @@ The alternative is to use either of these
 ## Deploy
 
 Read the [guide on roots.io](https://roots.io/docs/sage/9.x/deployment/)
+
+
+## getMod Helper
+
+You can call the `\App\getMod()` helper to get theme mod variables as an array.
+
+**Input**: Pass in an array with object elements each having `name`, `setting` and `default`
+
+```php
+$hero = \App\getMod([
+      [
+        'name' => 'title',
+        'setting' => 'hero_title',
+      ],
+      [
+        'name' => 'subtitle',
+        'setting' => 'hero_subtitle',
+        'default' => '',
+      ])
+// Output ->
+$hero = [
+    'title' : 'Value of title',
+    'subtitle' : 'Value of subtitle (if empty default value)'
+]
+
+```
+
+See `./app/Controllers/App.php` for example usage
+
+

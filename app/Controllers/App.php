@@ -30,4 +30,21 @@ class App extends Controller
         }
         return get_the_title();
     }
+    /** Demo Usage of getMod() */
+    /*
+    public function hero()
+    {
+        return \App\getMod([
+            [
+              'name' => 'title',
+              'setting' => 'hero_title',
+            ],
+            [
+              'name' => 'subtitle',
+              'setting' => 'hero_subtitle',
+              'default' => '',
+            ])
+    }
+    Now you can access $hero['title] and $hero['subtitle'] in your template
+    */
 }

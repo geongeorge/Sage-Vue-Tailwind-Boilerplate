@@ -136,3 +136,25 @@ function display_sidebar()
     isset($display) || $display = apply_filters('sage/display_sidebar', false);
     return $display;
 }
+
+/**
+ * Helper to get all customizer theme_mods
+ * settings as an associative array
+ * $arr = [
+ * [
+ * 'name'=>'whatever','
+ * control'=>'control_name',
+ * 'default' => 'whatever'
+ * ]]
+ */
+function getMod($arr)
+{
+  $result = [];
+  foreach ($arr as $val) {
+    $result[$val['name']] = get_theme_mod(
+      $val['setting'],
+      isset($val['default']) ? $val['default'] : ''
+    );
+  }
+  return $result;
+}
