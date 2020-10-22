@@ -121,3 +121,7 @@ $hero = [
 ```
 
 See `./app/Controllers/App.php` for example usage
+
+# Tailwind CSS
+
+Config is located at `resources/assets/styles/tailwind.config.js`
